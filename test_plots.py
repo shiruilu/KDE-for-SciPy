@@ -6,8 +6,8 @@ import sys
 import inspect
 import numpy as np
 import matplotlib.pyplot as plt
-import kde
-import dgp_class as dgp
+from core import kde
+import dgp.dgp_class as dgp
 
 def main(Nsamp=None, Nmesh=None):
     """
@@ -31,7 +31,7 @@ def main(Nsamp=None, Nmesh=None):
         x = model.sample(size=Nsamp)
         t, mesh, kdense = kde.kde(x, N=Nmesh)
         f = model.pdf(mesh)
-        
+
         fig = plt.figure()
         ax = fig.add_subplot(111)
         ax.set_title(name, size=36)
@@ -45,7 +45,7 @@ def main(Nsamp=None, Nmesh=None):
         fig.set_figwidth(12)
         fig.savefig(name+'.pdf')
         plt.close()
-        
+
 
     return None
 
