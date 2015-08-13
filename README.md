@@ -14,3 +14,5 @@
 Notice that AMISE for bandwidth selection only(?) applies to the case where underlying distribution of the data is known.
 
 * [mglerner](http://www.mglerner.com/blog/?p=28)
+
+* [jakevdp](http://jakevdp.github.io/blog/2013/12/01/kernel-density-estimation/) Comparison between existing (Python) packages, tips on efficient implementation.
